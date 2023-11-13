@@ -31,7 +31,7 @@ public class PDA
             try {
                 age = scanner.nextInt();
                 int YoungerAge = (age/2) + 7;
-                int HigherAge = (age+7)/2;
+                int HigherAge = (age*2) - 14;
                 if (age % 2 == 1) {
                     YoungerAge = YoungerAge + 1;
                 }
