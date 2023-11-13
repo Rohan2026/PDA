@@ -23,17 +23,23 @@ public class PDA
      * This is the main event loop for our PDA program
      */
     Scanner scanner = new Scanner(System.in);
-    int age = 0;
+    int age;
     int LOWER_BOUND = 14;
     public void runEventLoop() {
         while (true) { 
             System.out.println("How old are you?");
             try {
                 age = scanner.nextInt();
+                int YoungerAge = (age/2) + 7;
+                int HigherAge = (age+7)/2;
+                if (age % 2 == 1) {
+                    YoungerAge = YoungerAge + 1;
+                }
                 if (age < LOWER_BOUND) {
                     System.out.println(age+" is too young!!");
                 } else {
-                    System.out.println("Computations go here");
+                    System.out.println("Lowest age: " + YoungerAge);
+                    System.out.println("Highest age: " + HigherAge);
                 }
                 
             }catch (InputMismatchException error) {
